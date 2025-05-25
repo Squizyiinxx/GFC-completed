@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Blog card showing interior design inspiration" />
+  <title>Blog Card - Interior Design Inspiration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.ico" sizes="any" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-[#d2d6db] p-4">
+  <main>
+    <article class="w-[340px] flex flex-col rounded-lg bg-white shadow-lg overflow-hidden">
+      <figure>
+        <img src="img/blog-card.jpg" alt="Modern living room interior design inspiration"
+          class="w-full h-72 object-cover" loading="lazy" />
+      </figure>
+
+      <div class="flex flex-col gap-3 p-6">
+        <header>
+          <div class="inline-block">
+            <span class="font-normal text-sm text-green-700 bg-green-50 px-3 py-1 rounded-full border border-green-200">
+              Interior
+            </span>
+          </div>
+          <h1 class="font-semibold mt-2 text-lg text-neutral-900">
+            Top 5 Living Room Inspirations
+          </h1>
+        </header>
+
+        <div class="flex flex-col gap-6">
+          <p class="font-medium text-base text-neutral-600">
+            Curated vibrant colors for your living room, making it both pop and calm at the same time.
+          </p>
+          <div class="max-w-max">
+            <a href="#"
+            class="font-medium text-base text-indigo-700 flex items-center gap-2.5 hover:text-indigo-800 transition-colors group rounded btnShadow"
+            aria-label="Read more about living room inspirations">
+            Read more
+            <svg width="14" class="group-hover:translate-x-1 transition-transform duration-300 ease-in-out " height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true" class="transition-transform group-hover:translate-x-1">
+              <path
+                d="M10.4764 6.16658L6.00637 1.69657L7.18487 0.518066L13.6667 6.99992L7.18487 13.4817L6.00637 12.3032L10.4764 7.83325H0.333374V6.16658H10.4764Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="mt-8 text-center text-sm text-gray-600" >
+    <div class="credits" data-gfe-screenshot-exclude="true">
+      A challenge by
+      <a rel="noopener noreferrer" href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank">GreatFrontEnd Projects</a>. Built by
+      <a rel="noopener noreferrer" href="https://www.greatfrontend.com/projects/u/wowmr51" target="_blank">Joel</a>.
+      </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
