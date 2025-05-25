@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+  --accent-success: #4ade80;
+  --accent-warning: #facc15;
+  --accent-error: #f87171;
+}
+
+@theme {
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11"; 
+  --font-display--font-variation-settings: "opsz" 32; 
+}
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+  font-family: var(--font-body);
+  overflow: hidden;
+  margin: 0;
+  min-height: 100dvh;
+}
+
+
+@layer utilities {
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display text-[var(--text-primary)] tracking-tight font-semibold ;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl leading-tight mb-6;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl leading-snug mb-4;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl leading-snug mb-3;
+}
+
+h4 {
+  @apply text-xl md:text-2xl leading-snug mb-2;
+}
+
+p, li, blockquote {
+  @apply text-[var(--text-secondary)] leading-relaxed;
+}
+
+.card {
+  @apply bg-[var(--bg-secondary)] rounded-xl p-6 shadow-xl border border-[var(--bg-tertiary)];
+}
+
+.btn-primary {
+  @apply bg-[var(--accent-primary)] text-[var(--bg-primary)] font-medium py-2 px-4 rounded-lg transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-[var(--bg-tertiary)] text-[var(--text-primary)] font-medium py-2 px-4 rounded-lg transition-colors;
+}
+
+.btn-outline {
+  @apply border border-[var(--accent-primary)] text-[var(--accent-primary)] hover:bg-[var(--accent-primary)]  font-medium py-2 px-4 rounded-lg transition-colors;
+}
+.nav-link {
+  @apply text-[var(--text-tertiary)] hover:text-[var(--accent-primary)] transition-colors;
+}
+
+.nav-link.active {
+  @apply text-[var(--accent-primary)] font-medium;
+}
+input, textarea, select {
+  @apply bg-[var(--bg-tertiary)] border border-[var(--bg-tertiary)] focus:border-[var(--accent-primary)] text-[var(--text-primary)] rounded-lg px-4 py-2 focus:outline-none focus:ring-1 focus:ring-[var(--accent-primary)];
+}
+table {
+  @apply w-full border-collapse;
+}
+
+th {
+  @apply bg-[var(--bg-tertiary)] text-[var(--text-primary)] text-left py-3 px-4 font-medium;
+}
+
+td {
+  @apply border-t border-[var(--bg-tertiary)] py-3 px-4 text-[var(--text-secondary)];
+}
+
+tr:hover td {
+  @apply bg-[var(--bg-secondary)];
+}
+.badge-success {
+  @apply bg-[var(--accent-success)] text-[var(--accent-success)] px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-warning {
+  @apply bg-[var(--accent-warning)] text-[var(--accent-warning)] px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-error {
+  @apply bg-[var(--accent-error)] text-[var(--accent-error)] px-2 py-0.5 rounded-full text-xs font-medium;
+}
+.container {
+  @apply  mx-auto px-4 lg:px-8 lg:max-w-7xl md:max-w-4xl w-full h-screen overflow-y-auto flex flex-col
+}
+
+.glass-effect {
+  @apply bg-[var(--bg-secondary)]/60 backdrop-blur-md border border-[var(--bg-tertiary)]/60 shadow-lg;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+}
+
+.separator {
+  @apply h-px w-full bg-[var(--bg-tertiary)] my-6;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--bg-secondary)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--accent-primary)];
+}
+}

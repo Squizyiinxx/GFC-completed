@@ -1,0 +1,26 @@
+
+name: Deploy Blog Card Static
+
+on:
+  push:
+    branches:
+      - main 
+    paths:
+      - 'challenges/html/blog-card/**' 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.0.0
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./challenges/html/blog-card 
+          destination_dir: html/blog-card 
+          enable_jekyll: false
