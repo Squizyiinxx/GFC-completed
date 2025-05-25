@@ -5,6 +5,8 @@ Focused on HTML, CSS, accessibility, and modern frontend best practices.
 
 ---
 
+live :https://squizyiinxx.github.io/GFC-completed/
+
 ## 📂 Challenges
 
 | Challenge | Preview | Source Code |
